@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project1", "Project1\Project1.csproj", "{3B21AF61-4D46-40B8-9917-76B34215A8AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project2", "Project2\Project2.csproj", "{8BD02A0B-27F5-42EF-995F-282708E18DB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project3", "Project3\Project3.csproj", "{158419AD-132E-421C-9B3C-28F17242CCDB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B21AF61-4D46-40B8-9917-76B34215A8AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B21AF61-4D46-40B8-9917-76B34215A8AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B21AF61-4D46-40B8-9917-76B34215A8AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B21AF61-4D46-40B8-9917-76B34215A8AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BD02A0B-27F5-42EF-995F-282708E18DB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BD02A0B-27F5-42EF-995F-282708E18DB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BD02A0B-27F5-42EF-995F-282708E18DB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BD02A0B-27F5-42EF-995F-282708E18DB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{158419AD-132E-421C-9B3C-28F17242CCDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{158419AD-132E-421C-9B3C-28F17242CCDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{158419AD-132E-421C-9B3C-28F17242CCDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{158419AD-132E-421C-9B3C-28F17242CCDB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61FDE0A5-EF9E-42B9-9368-124C31E1960B}
+	EndGlobalSection
+EndGlobal
