@@ -78,7 +78,7 @@ namespace ConsoleApp1
                     shape = new Triangle(random.Next(1, 10), random.Next(1, 10));
                     break;
             }
-            Console.WriteLine(shape.GetType() + " " + shape.Area());
+            Console.WriteLine(shape.GetType().Name + " " + shape.Area());
             return shape;
         }
     }
