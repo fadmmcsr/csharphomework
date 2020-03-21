@@ -18,7 +18,7 @@ namespace ConsoleApp1
         public override bool Equals(object obj)
         {
             OrderItem orderItem = obj as OrderItem;
-            return orderItem.Name == this.Name && orderItem.Price == this.Price;
+            return orderItem.Name == Name && orderItem.Price == Price;
         }
         public override int GetHashCode()
         {

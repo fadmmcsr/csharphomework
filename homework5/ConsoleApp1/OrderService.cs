@@ -38,17 +38,17 @@ namespace ConsoleApp1
         }
         public List<Order> QueryByID(int ID)
         {
-            var query = orders.Where(order => order.ID == ID);
+            var query = orders.Where(order => order.ID == ID).OrderBy(order => order.items.Sum(i => i.Price));
             return query.ToList();
         }
         public List<Order> QueryByCustomerID(int customerID)
         {
-            var query = orders.Where(order => order.CustomerID == customerID);
+            var query = orders.Where(order => order.CustomerID == customerID).OrderBy(order => order.items.Sum(i => i.Price));
             return query.ToList();
         }
         public List<Order> QueryByCustomerName(string customerName)
         {
-            var query = orders.Where(order => order.CustomerName == customerName);
+            var query = orders.Where(order => order.CustomerName == customerName).OrderBy(order => order.items.Sum(i => i.Price));
             return query.ToList();
         }
         public List<Order> QueryByItemName(string itemName)
@@ -64,7 +64,7 @@ namespace ConsoleApp1
                     }
                 }
                 return false;
-            });
+            }).OrderBy(order => order.items.Sum(i => i.Price));
             return query.ToList();
         }
         public List<Order> QueryBy(int method,string query)
@@ -94,16 +94,16 @@ namespace ConsoleApp1
             switch (method)
             {
                 case 1:
-                    list.Sort((o1, o2) => string.Compare(o2.CustomerName, o1.CustomerName));
+                    list.Sort((o1, o2) => string.Compare(o1.CustomerName, o2.CustomerName));
                     return list;
                 case 2:
-                    list.Sort((o1, o2) => o2.CustomerID - o1.CustomerID);
+                    list.Sort((o1, o2) => o1.CustomerID - o2.CustomerID);
                     return list;
                 case 3:
-                    list.Sort((o1, o2) => DateTime.Compare(o2.DateTime, o1.DateTime));
+                    list.Sort((o1, o2) => DateTime.Compare(o1.DateTime, o2.DateTime));
                     return list;
                 default:
-                    list.Sort((o1, o2) => o2.ID - o1.ID);
+                    list.Sort((o1, o2) => o1.ID - o2.ID);
                     return list;
             }
         }

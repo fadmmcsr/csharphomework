@@ -46,9 +46,10 @@ namespace ConsoleApp1
         public override bool Equals(object obj)
         {
             Order order = obj as Order;
-            foreach (OrderItem i in items)
+            foreach (OrderItem item in items)
             {
-                if (!i.Equals(order) || order.ID != this.ID)
+                foreach (OrderItem i in order.items)
+                    if (!i.Equals(item) || order.ID != this.ID)
                     return false;
             }
             return true;
