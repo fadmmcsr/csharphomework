@@ -21,6 +21,7 @@ namespace ConsoleApp1
             catch(NullReferenceException nre)
             {
                 Console.WriteLine("没有此订单!");
+                return false;
             }
         }
         public bool AddOrder(Order order)
@@ -43,12 +44,13 @@ namespace ConsoleApp1
                         return true;
                     }
                 }
+                return false;
             }
             catch (NullReferenceException nre)
             {
                 Console.WriteLine("没有此订单!");
-            }
-            return false;
+                return false;
+            } 
         }
         public List<Order> QueryByID(int ID)
         {
