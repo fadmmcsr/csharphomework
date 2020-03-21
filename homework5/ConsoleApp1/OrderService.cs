@@ -11,10 +11,17 @@ namespace ConsoleApp1
         public List<Order> orders = new List<Order>();
         public bool DeleteOrder(Order order)
         {
-            if (!orders.Contains(order))
-                return false;
-            orders.Remove(order);
-            return true;
+            try
+            {
+                if (!orders.Contains(order))
+                    return false;
+                orders.Remove(order);
+                return true;
+            }
+            catch(NullReferenceException nre)
+            {
+                Console.WriteLine("没有此订单!");
+            }
         }
         public bool AddOrder(Order order)
         {
@@ -25,14 +32,21 @@ namespace ConsoleApp1
         }
         public bool UpdateOrder(Order order)
         {
-            foreach (Order o in orders)
+            try
             {
-                if (o.ID == order.ID)
+                foreach (Order o in orders)
                 {
-                    int index = orders.IndexOf(o);
-                    orders[index] = order;
-                    return true;
+                    if (o.ID == order.ID)
+                    {
+                        int index = orders.IndexOf(o);
+                        orders[index] = order;
+                        return true;
+                    }
                 }
+            }
+            catch (NullReferenceException nre)
+            {
+                Console.WriteLine("没有此订单!");
             }
             return false;
         }
