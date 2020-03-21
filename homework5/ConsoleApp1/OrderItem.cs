@@ -10,6 +10,11 @@ namespace ConsoleApp1
     {
         public string Name { get; set; }
         public double Price { get; set; }
+        public OrderItem(string name, double price)
+        {
+            Name = name;
+            Price = price;
+        }
         public override bool Equals(object obj)
         {
             OrderItem orderItem = obj as OrderItem;
@@ -21,7 +26,7 @@ namespace ConsoleApp1
         }
         public override string ToString()
         {
-            return "Name:" + Name + " Price:" + Price;
+            return "货物名:" + Name + " 单价:" + Price;
         }
     }
 }

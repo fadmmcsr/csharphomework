@@ -59,9 +59,16 @@ namespace ConsoleApp1
         }
         public override string ToString()
         {
-            return "ID:" + ID + "\nAddress:" + Address + "\nDateTime:" + DateTime +
-                "\nOrdererName:" + CustomerName + "\nOrdererID:" + CustomerID +
-                "\nTotal Items:" + items.Count + "\nTotal Price:" + items.Sum(i => i.Price);
+            string result;
+            result = "ID:" + ID + "\n地址:" + Address + "\n时间:" + DateTime +
+                "\n客户名:" + CustomerName + "\n客户ID:" + CustomerID +
+                "\n总项数:" + items.Count + "\n总价:" + items.Sum(i => i.Price) +
+                "\n各个项目:";
+            foreach(OrderItem i in items)
+            {
+                result += "\n\t" + i;
+            }
+            return result;
         }
     }
 }
