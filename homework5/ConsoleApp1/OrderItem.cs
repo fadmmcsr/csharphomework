@@ -6,14 +6,22 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class OrderItem
+    public class OrderItem
     {
         public string Name { get; set; }
         public double Price { get; set; }
+        public OrderItem() { }
         public OrderItem(string name, double price)
         {
-            Name = name;
-            Price = price;
+            try
+            {
+                Name = name;
+                Price = price;
+            }
+            catch (ArgumentException)
+            {
+                Console.WriteLine("输入有误!");
+            }
         }
         public override bool Equals(object obj)
         {
