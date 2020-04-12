@@ -86,26 +86,24 @@ namespace WindowsFormsApp1
                     orders.Remove(o);
             });
         }
-        public void Query(string query, int method) 
+        public List<Order> Query(string query, int method) 
         {
             switch(method)
             {
                 case 1:
                     int id=Convert.ToInt32(query);
-                    orders.Where(o => o.ID == id).OrderBy(o => o.items.Sum(i => i.TotalPrice()));
-                    break;
+                    return orders.Where(o => o.ID == id).OrderBy(o => o.items.Sum(i => i.TotalPrice())).ToList();
                 case 2:
                     int cid = Convert.ToInt32(query);
-                    orders.Where(o => o.CustomerID == cid).OrderBy(o => o.items.Sum(i => i.TotalPrice()));
-                    break;
+                    return orders.Where(o => o.CustomerID == cid).OrderBy(o => o.items.Sum(i => i.TotalPrice())).ToList();
                 case 3:
                     string name = query;
-                    orders.Where(o => o.CustomerName == name).OrderBy(o => o.items.Sum(i => i.TotalPrice()));
-                    break;
+                    return orders.Where(o => o.CustomerName == name).OrderBy(o => o.items.Sum(i => i.TotalPrice())).ToList();
                 case 4:
                     string itemName = query;
-                    orders.Where(o => o.items.Exists(i => i.Name == itemName)).OrderBy(o => o.items.Sum(i => i.TotalPrice()));
-                    break;
+                    return orders.Where(o => o.items.Exists(i => i.Name == itemName)).OrderBy(o => o.items.Sum(i => i.TotalPrice())).ToList();
+                default:
+                    return null;
             }
         }
         public void Export(string fileName)

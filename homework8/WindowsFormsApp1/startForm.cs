@@ -41,7 +41,8 @@ namespace WindowsFormsApp1
         {
             int method = cmb_Method.SelectedIndex;
             string query = txt_QueryAndRemove.Text;
-            orderService.Query(query, method);
+            List<Order> orders = orderService.Query(query, method);
+            dgv_Order.DataSource = orders;
         }
 
         private void btn_Import_Click(object sender, EventArgs e)
