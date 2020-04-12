@@ -54,6 +54,7 @@
             this.orderItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -63,18 +64,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Item)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderItemBindingSource)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.cmb_Method);
-            this.panel1.Controls.Add(this.txt_QueryAndRemove);
+            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.btn_Export);
             this.panel1.Controls.Add(this.btn_Import);
-            this.panel1.Controls.Add(this.btn_Remove);
-            this.panel1.Controls.Add(this.btn_Query);
             this.panel1.Controls.Add(this.btn_UpdateOrder);
             this.panel1.Controls.Add(this.btn_AddOrder);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -86,20 +83,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 171);
+            this.label2.Location = new System.Drawing.Point(6, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 12);
+            this.label2.Size = new System.Drawing.Size(29, 12);
             this.label2.TabIndex = 9;
-            this.label2.Text = "查询或删除内容";
+            this.label2.Text = "内容";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 127);
+            this.label1.Location = new System.Drawing.Point(6, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 12);
+            this.label1.Size = new System.Drawing.Size(29, 12);
             this.label1.TabIndex = 8;
-            this.label1.Text = "查询或删除方式";
+            this.label1.Text = "方式";
             // 
             // cmb_Method
             // 
@@ -110,21 +107,21 @@
             "用户账号",
             "用户名",
             "商品名"});
-            this.cmb_Method.Location = new System.Drawing.Point(12, 144);
+            this.cmb_Method.Location = new System.Drawing.Point(6, 32);
             this.cmb_Method.Name = "cmb_Method";
             this.cmb_Method.Size = new System.Drawing.Size(75, 20);
             this.cmb_Method.TabIndex = 7;
             // 
             // txt_QueryAndRemove
             // 
-            this.txt_QueryAndRemove.Location = new System.Drawing.Point(12, 186);
+            this.txt_QueryAndRemove.Location = new System.Drawing.Point(6, 76);
             this.txt_QueryAndRemove.Name = "txt_QueryAndRemove";
             this.txt_QueryAndRemove.Size = new System.Drawing.Size(75, 21);
             this.txt_QueryAndRemove.TabIndex = 6;
             // 
             // btn_Export
             // 
-            this.btn_Export.Location = new System.Drawing.Point(12, 99);
+            this.btn_Export.Location = new System.Drawing.Point(18, 99);
             this.btn_Export.Name = "btn_Export";
             this.btn_Export.Size = new System.Drawing.Size(75, 23);
             this.btn_Export.TabIndex = 5;
@@ -134,7 +131,7 @@
             // 
             // btn_Import
             // 
-            this.btn_Import.Location = new System.Drawing.Point(12, 70);
+            this.btn_Import.Location = new System.Drawing.Point(18, 70);
             this.btn_Import.Name = "btn_Import";
             this.btn_Import.Size = new System.Drawing.Size(75, 23);
             this.btn_Import.TabIndex = 4;
@@ -144,7 +141,7 @@
             // 
             // btn_Remove
             // 
-            this.btn_Remove.Location = new System.Drawing.Point(12, 242);
+            this.btn_Remove.Location = new System.Drawing.Point(6, 132);
             this.btn_Remove.Name = "btn_Remove";
             this.btn_Remove.Size = new System.Drawing.Size(75, 23);
             this.btn_Remove.TabIndex = 3;
@@ -154,7 +151,7 @@
             // 
             // btn_Query
             // 
-            this.btn_Query.Location = new System.Drawing.Point(12, 213);
+            this.btn_Query.Location = new System.Drawing.Point(6, 103);
             this.btn_Query.Name = "btn_Query";
             this.btn_Query.Size = new System.Drawing.Size(75, 23);
             this.btn_Query.TabIndex = 2;
@@ -164,7 +161,7 @@
             // 
             // btn_UpdateOrder
             // 
-            this.btn_UpdateOrder.Location = new System.Drawing.Point(12, 41);
+            this.btn_UpdateOrder.Location = new System.Drawing.Point(18, 41);
             this.btn_UpdateOrder.Name = "btn_UpdateOrder";
             this.btn_UpdateOrder.Size = new System.Drawing.Size(75, 23);
             this.btn_UpdateOrder.TabIndex = 1;
@@ -174,7 +171,7 @@
             // 
             // btn_AddOrder
             // 
-            this.btn_AddOrder.Location = new System.Drawing.Point(12, 12);
+            this.btn_AddOrder.Location = new System.Drawing.Point(18, 12);
             this.btn_AddOrder.Name = "btn_AddOrder";
             this.btn_AddOrder.Size = new System.Drawing.Size(75, 23);
             this.btn_AddOrder.TabIndex = 0;
@@ -297,6 +294,21 @@
             // 
             this.orderItemBindingSource.DataSource = typeof(WindowsFormsApp1.OrderItem);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cmb_Method);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.btn_Query);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.btn_Remove);
+            this.groupBox1.Controls.Add(this.txt_QueryAndRemove);
+            this.groupBox1.Location = new System.Drawing.Point(12, 128);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(98, 168);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "查询或删除";
+            // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -307,7 +319,6 @@
             this.Name = "StartForm";
             this.Text = "订单系统";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -316,6 +327,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Item)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderItemBindingSource)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -350,6 +363,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn numberDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
