@@ -86,7 +86,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 231);
+            this.label2.Location = new System.Drawing.Point(15, 171);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 12);
             this.label2.TabIndex = 9;
@@ -95,7 +95,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 187);
+            this.label1.Location = new System.Drawing.Point(13, 127);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 12);
             this.label1.TabIndex = 8;
@@ -110,21 +110,21 @@
             "用户账号",
             "用户名",
             "商品名"});
-            this.cmb_Method.Location = new System.Drawing.Point(12, 204);
+            this.cmb_Method.Location = new System.Drawing.Point(12, 144);
             this.cmb_Method.Name = "cmb_Method";
             this.cmb_Method.Size = new System.Drawing.Size(75, 20);
             this.cmb_Method.TabIndex = 7;
             // 
             // txt_QueryAndRemove
             // 
-            this.txt_QueryAndRemove.Location = new System.Drawing.Point(12, 246);
+            this.txt_QueryAndRemove.Location = new System.Drawing.Point(12, 186);
             this.txt_QueryAndRemove.Name = "txt_QueryAndRemove";
             this.txt_QueryAndRemove.Size = new System.Drawing.Size(75, 21);
             this.txt_QueryAndRemove.TabIndex = 6;
             // 
             // btn_Export
             // 
-            this.btn_Export.Location = new System.Drawing.Point(12, 157);
+            this.btn_Export.Location = new System.Drawing.Point(12, 99);
             this.btn_Export.Name = "btn_Export";
             this.btn_Export.Size = new System.Drawing.Size(75, 23);
             this.btn_Export.TabIndex = 5;
@@ -134,7 +134,7 @@
             // 
             // btn_Import
             // 
-            this.btn_Import.Location = new System.Drawing.Point(12, 128);
+            this.btn_Import.Location = new System.Drawing.Point(12, 70);
             this.btn_Import.Name = "btn_Import";
             this.btn_Import.Size = new System.Drawing.Size(75, 23);
             this.btn_Import.TabIndex = 4;
@@ -144,7 +144,7 @@
             // 
             // btn_Remove
             // 
-            this.btn_Remove.Location = new System.Drawing.Point(12, 99);
+            this.btn_Remove.Location = new System.Drawing.Point(12, 242);
             this.btn_Remove.Name = "btn_Remove";
             this.btn_Remove.Size = new System.Drawing.Size(75, 23);
             this.btn_Remove.TabIndex = 3;
@@ -154,7 +154,7 @@
             // 
             // btn_Query
             // 
-            this.btn_Query.Location = new System.Drawing.Point(12, 70);
+            this.btn_Query.Location = new System.Drawing.Point(12, 213);
             this.btn_Query.Name = "btn_Query";
             this.btn_Query.Size = new System.Drawing.Size(75, 23);
             this.btn_Query.TabIndex = 2;
